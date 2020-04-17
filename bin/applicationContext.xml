@@ -16,7 +16,7 @@
 
     <bean 
         id="myCoach"
-    	class="com.karimov.springdemo.CricketCoach">
+    	class="com.karimov.springdemo.TrackCoach">
         <constructor-arg
             ref="myFortune"/>
     </bean>
@@ -24,10 +24,11 @@
     <bean
         id="myCricketCoach"
         class="com.karimov.springdemo.CricketCoach">
-    <property
-        name="fortunService" ref="myFortune"/>
+    <property name="fortunService" ref="myFortune"/>
+    <property name="email" value="coach@gmail.com" />
+    <property name="team" value="sunrisers" />
     </bean>
-    
+
 </beans>
 
 
