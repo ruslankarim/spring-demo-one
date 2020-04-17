@@ -11,20 +11,21 @@
     <!-- Define your beans here -->
     <bean
         id="myFortune"
-        class="com.karimov.springdemo.HappyFortuneService"
-    >
+        class="com.karimov.springdemo.HappyFortuneService">
     </bean>
+
     <bean 
         id="myCoach"
     	class="com.karimov.springdemo.CricketCoach">
         <constructor-arg
-            ref="myFortune"
-        />
+            ref="myFortune"/>
     </bean>
+
     <bean
         id="myCricketCoach"
-        class="com.karimov.springdemo.CricketCoach"
-    >
+        class="com.karimov.springdemo.CricketCoach">
+    <property
+        name="fortunService" ref="myFortune"/>
     </bean>
     
 </beans>
