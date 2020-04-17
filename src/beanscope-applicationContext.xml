@@ -15,7 +15,8 @@
 
     <bean 
         id="myCoach"
-    	class="com.karimov.springdemo.TrackCoach" scope="prototype">
+    	class="com.karimov.springdemo.TrackCoach"
+        scope="prototype">
         <constructor-arg
             ref="myFortune"/>
     </bean> 

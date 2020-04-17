@@ -10,13 +10,16 @@
     <!-- Define your beans here -->
     <bean
         id="myFortune"
-        class="com.karimov.springdemo.HappyFortuneService">
+        class="com.karimov.springdemo.HappyFortuneService"
+        
+        >
     </bean>
 
     <bean 
         id="myCoach"
     	class="com.karimov.springdemo.TrackCoach"
-        scope="prototype">
+        init-method="doMyStartupStuff"
+        destroy-method="doMyCleanupStuffYoyo">
         <constructor-arg
             ref="myFortune"/>
     </bean> 
