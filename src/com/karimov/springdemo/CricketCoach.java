@@ -31,7 +31,6 @@ public class CricketCoach implements Coach {
     }
 
     public void setTeam(String team) {
-        System.out.println("CricketCoach: inside setTeam");
         this.team = team;
     }
 
